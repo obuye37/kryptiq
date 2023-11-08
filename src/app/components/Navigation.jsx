@@ -1,6 +1,6 @@
 import React from 'react'
 import { usePathname } from 'next/navigation'
-import LogoImg from '../assets/logo/KIQlogo.png'
+import LogoImg from '../assets/KIQlogo.png'
 import { Navbar, NavLink, Logo, Box } from './Styled'
 import { FaTwitter, FaTelegram } from 'react-icons/fa'
 import Link from 'next/link'
