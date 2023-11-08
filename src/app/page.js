@@ -1,96 +1,88 @@
+import { 
+  Description,
+  Button, 
+  Main, 
+  Heading, 
+  Text, 
+  Box} from '../components/Styled'
+  import BrainBuild from '../assets/iqbrain.svg'
+  import HeroImage from '../assets/hero-img.svg'
+  import HeroBg from '../assets/logo/logo.png'
 import Image from 'next/image'
-import styles from './page.module.css'
+import LogoImg from '../assets/logo/KIQlogo.png'
+import { FaFacebook, FaTelegram, FaTwitter } from 'react-icons/fa'
 
-export default function Home() {
+
+
+const Home = () => {
   return (
-    <main className={styles.main}>
-      Welcome to Krypto IQ
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <Main>
+      <Box flex pd="5rem 0" bgColor="#eee">
+        <Box pd="2rem 8rem">
+          <Text size='sm' heavy>Welcome to Krypto IQ</Text>
+          <Heading xlg italize>Learn and Earn in a Fun Way</Heading>
+          <Text size='sm'>Learn and Earn in a fun way</Text>
+        </Box>
+        <Box flex jc="center">
+          <Image width={300} height={300} alt='hero image' src={HeroImage} />
+        </Box>
+      </Box>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+    {/* About Section */}
+      <Box flex fd="column" pd="2rem 8rem" ai='center'>
+        <Heading lg color='#eee'> Krypto <Text as='span' color='yellow'>IQ</Text> </Heading>
+        <Text center size="sm" light color='#eee' width="50%">We are here to help you make money while you are catching all the fun on this exciting crypto space</Text>
+        <Button small bgColor='yellow' color='#111'> Learn More... </Button>
+      </Box>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      {/* Join Section */}
+      <Box flex pd="2rem 8rem" ai="center">
+        <Box>
+          <Text>Join Us &</Text>
+          <Heading as="h2">Boost your Crypto Knowledge</Heading>
+          <Text>follow</Text><span><FaFacebook /><FaTwitter /></span>
+        </Box>
+        <Box>
+          <Image src={BrainBuild}/>
+        </Box>
+      </Box>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+      <Box bgColor="yellow">
+        <Heading as='h1'>How it Works</Heading>
+        <Box w="100%" flex style={{flexWrap:'wrap'}}>
+          <Box w="50%" pd="4rem" >
+            <Box w='20%'>
+              <Heading as="h3" bgColor="#111" color="#eee" pd=".5rem">1. Join</Heading>
+            </Box>
+            <Text>Begin your earning journey with us by following us on twitter and joining our telegram channel to get updates and learn your way into earning your probably first crypto</Text>
+          </Box>
+          <Box w="50%" pd="4rem">
+            <Heading as="h3">2. Learn</Heading>
+            <Text>Read our threads, twits and channel updates to get good knowledge and understanding on crypto assets, defi, nft, blockchain and more</Text>
+          </Box>
+          <Box w="50%" pd="4rem">
+            <Heading as="h3">3. Play</Heading>
+            <Text>Keep Watch and join our learn to earn quiz and competitions, get the right answer while fulfilling all necessities</Text>
+          </Box>
+          <Box w="50%" pd="4rem">
+            <Heading as="h3">4. Earn</Heading>
+            <Text>Correctly answered our question? Drop your wallet to receive appropriately</Text>
+          </Box>
+        </Box>
+      </Box>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
-}
+      {/* Footer Section */}
+      <Box w="100%" flex as="footer" bgColor="#111" gap="10px">
+        <Box w="50%" flex jc='left' ai="center" pd="2rem 8rem">
+          <Image src={LogoImg} width={150} height={50} />
+        </Box>
+        <Box w='50%' flex gap="20px" ai="center" jc="end" pd="2rem 8rem" color='white'>
+          <FaTwitter color='white'/>
+          <FaTelegram color='white'/>
+        </Box>
+      </Box>
+      
+    </Main>
+    )
+  }
+export default Home
