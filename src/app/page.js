@@ -4,12 +4,12 @@ import {
   Main, 
   Heading, 
   Text, 
-  Box} from '../components/Styled'
-  import BrainBuild from '../assets/iqbrain.svg'
-  import HeroImage from '../assets/hero-img.svg'
-  import HeroBg from '../assets/logo/logo.png'
+  Box} from './components/Styled'
+  import BrainBuild from './assets/iqbrain.svg'
+  import HeroImage from './assets/hero-img.svg'
+  import HeroBg from './assets/logo/logo.png'
 import Image from 'next/image'
-import LogoImg from '../assets/logo/KIQlogo.png'
+import LogoImg from './assets/logo/KIQlogo.png'
 import { FaFacebook, FaTelegram, FaTwitter } from 'react-icons/fa'
 
 
