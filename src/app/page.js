@@ -8,7 +8,7 @@ import {
   import BrainBuild from './assets/iqbrain.svg'
   import HeroImage from './assets/hero-img.svg'
   import Image from 'next/image'
-  import LogoImg from './assets/KIQlogo.png'
+  import LogoImg from './assets/logo.png'
   import { FaFacebook, FaTelegram, FaTwitter } from 'react-icons/fa'
 
 
